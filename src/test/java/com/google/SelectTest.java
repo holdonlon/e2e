@@ -9,7 +9,7 @@ public class SelectTest extends WebDriverTestBase {
     @Test
     public void testDropdown() {
         driver.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select");
-        WebElement iFrame = driver.findElement(By.xpath("/html/body/select"));
+        WebElement iFrame = driver.findElement(By.id("iframeResult"));
         driver.switchTo ().frame(iFrame);
     }
 

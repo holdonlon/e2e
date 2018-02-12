@@ -1,4 +1,4 @@
-package Selenide;
+package selenide;
 
 import com.google.core.SelenideTestBase;
 

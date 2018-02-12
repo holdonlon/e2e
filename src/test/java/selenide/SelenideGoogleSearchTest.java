@@ -1,22 +1,17 @@
-package Selenide;
+package selenide;
 
 import com.google.core.SelenideTestBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import selenide.SearchPage;
-import selenide.SearchResultPage;
 
 
 public class SelenideGoogleSearchTest extends SelenideTestBase {
-
-    //ChromeDriverManager.getInstance().setup();
-
     private String searchText = "selenide";
-    private SearchPage searchPage = new SearchPage();
-    private SearchResultPage searchResultPage = new SearchResultPage();
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void searchTest() {
+        SearchPage searchPage = new SearchPage();
+        SearchResultPage searchResultPage = new SearchResultPage();
         searchPage.searchFor(searchText);
         searchResultPage.isvisible();
         Assert.assertEquals(searchResultPage.text(), searchText);
