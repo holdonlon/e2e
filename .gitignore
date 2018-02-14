@@ -115,6 +115,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-.allure-results
+allure-results
 
 .DS_Store
