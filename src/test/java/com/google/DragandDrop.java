@@ -14,6 +14,6 @@ public class DragandDrop extends WebDriverTestBase {
         WebElement from = driver.findElement(By.xpath("//*[@id=\"sample\"]/div[1]/span[1]/div/div[1]"));
         //WebElement to = driver.findElement(By.xpath(""));
         Actions builder = new Actions(driver);
-        from.getAttribute("src").equals("");
+        //from.getAttribute("src").equals("");
     }
 }

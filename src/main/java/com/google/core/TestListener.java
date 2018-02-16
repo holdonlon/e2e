@@ -1,5 +1,6 @@
 package com.google.core;
 
+import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -10,6 +11,8 @@ import org.testng.ITestResult;
 
 import java.io.File;
 import java.io.IOException;
+
+import static com.google.common.io.Files.toByteArray;
 
 public class TestListener implements ITestListener {
     private WebDriver driver;
@@ -34,6 +37,16 @@ public class TestListener implements ITestListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @Attachment(value = "{0}",type = "image/png")
+    public byte[]saveImageAttach(String attachName){
+        try {
+            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            return toByteArray(scrFile);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return new byte[0];
     }
 
     @Override

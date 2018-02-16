@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 public class SearchGoogleTest extends WebDriverTestBase {
     private By searchFieldLocator = By.xpath("//*[@id=\"lst-ib\"]");
     private By linkLocator = By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/h3/a");
-
     private WebElement searchField;
     private WebElement linkField;
     private String searchData = "Selenium";
