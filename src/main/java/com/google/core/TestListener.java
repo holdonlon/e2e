@@ -37,6 +37,7 @@ public class TestListener implements ITestListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        saveImageAttach(iTestResult.getMethod().getMethodName());
     }
     @Attachment(value = "{0}",type = "image/png")
     public byte[]saveImageAttach(String attachName){
