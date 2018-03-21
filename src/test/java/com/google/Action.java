@@ -10,7 +10,7 @@ public class Action extends WebDriverTestBase{
     public void dragAnd(){
         driver.get("https://gojs.net/latest/samples/htmlDragDrop.html?gclid=CLjWnLeG5tQCFUeVGwodCowEcA");
         WebElement fromElem = driver.findElement(By.xpath(""));
-        WebElement toElem = driver.findElement("By.xpath")
+        //WebElement toElem = driver.findElement("By.xpath")
 
     }
 }
