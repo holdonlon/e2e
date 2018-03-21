@@ -1,15 +1,24 @@
 package com.google.pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 
 public class GoogleSearchPage {
-    @FindBy(how = How.XPATH, using = "//*[@id=\"lst-ib\"]")
+
+    private WebDriver driver;
+    private By searchFieldLocator = By.name("q");
     private WebElement searchField;
 
-    public void searchFor(String searchdata) {
-        searchField.sendKeys(searchdata);
+    private By searchButtonLocator = By.xpath("//*[@id=\\\"sbtc\\\"]/div[2]/div[2]/div[1]/div/ul/li[11]/div/span[1]/span/input");
+    private WebElement searchButton;
+
+    public GoogleSearchPage(WebDriver driver){
+        this.driver = driver;
+    }
+    public void searchFor(String searchData){
+        searchField = driver.findElement(searchFieldLocator);
+        searchField.sendKeys(searchData);
         searchField.submit();
     }
 }
