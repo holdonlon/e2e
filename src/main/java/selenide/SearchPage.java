@@ -14,6 +14,6 @@ public class SearchPage {
     public SearchPage searchFor(String searchText) {
         Selenide.open("https://www.google.com");
         search.val(searchText).submit();
-        return this;
+        return new SearchPage();
     }
 }
