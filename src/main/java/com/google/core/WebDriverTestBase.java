@@ -27,6 +27,6 @@ public class WebDriverTestBase {
     }
     @AfterClass
     protected void tearDown() {
-        driver.quit();
+        driver.close();
     }
 }
