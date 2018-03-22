@@ -4,7 +4,7 @@ import com.google.core.WebDriverTestBase;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-public class GmailLoginPageObjectTest extends WebDriverTestBase{
+public class GmailLoginPageObjectTest extends WebDriverTestBase {
 
     @Test
     public void gmailLoginTest() {
