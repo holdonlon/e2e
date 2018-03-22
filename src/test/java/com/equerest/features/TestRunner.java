@@ -6,7 +6,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 import org.testng.annotations.*;
 
 @CucumberOptions(
-    features = "src/test/resourses/features",
+    features = "src/test/resourses/bdd.pages.features",
     glue = {"stepdefs"},
     tags = {~@Ignore},
     format ={
@@ -22,7 +22,7 @@ public class TestRunner {
     public void setUpClass() {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
-    @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider ="features");
+    @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "bdd/pages/features");
     public void feature(CucumberFeatureWrapper cucumberFeature) {
         testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
     }
